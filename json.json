@@ -1,0 +1,162 @@
+[
+  {
+    "id": 10,
+    "kategori": "Forretter",
+    "navn": "Frisk hjemmelavet suppe",
+    "pris": 60,
+    "beskrivelse": "Vores suppe ændres hver uge. Spørg tjeneren om ugens suppe.",
+    "billede": "suppe"
+  },
+  {
+    "id": 11,
+    "kategori": "Forretter",
+    "navn": "Nachos",
+    "pris": 60,
+    "beskrivelse": "Sprøde tortillachips, gratineret med cheddarost og jalapenos, servers med salsa.",
+    "billede": "nachos"
+  },
+  {
+    "id": 12,
+    "kategori": "Forretter",
+    "navn": "Mexicansk rejecocktail",
+    "pris": 80,
+    "beskrivelse": "Friteret majstortilla fyldt med lækre kæmperejer, hjemmelavet mango salsa, avocado og delikat chili-limedressing.",
+    "billede": "rejecocktail"
+  },
+  {
+    "id": 13,
+    "kategori": "Forretter",
+    "navn": "Chicken wings",
+    "pris": 65,
+    "beskrivelse": "Honning-chilimarinerede kyllingevinger serveres med tortillachips gratineret med cheddar ost.",
+    "billede": "chickenwings"
+  },
+  {
+    "id": 14,
+    "kategori": "Forretter",
+    "navn": "Grillede kæmperejer",
+    "pris": 80,
+    "beskrivelse": "Grillede chili-limemarinerede kæmperejer med flamberet hvidvin.",
+    "billede": "grillederejer"
+  },
+  {
+    "id": 15,
+    "kategori": "Hovedretter",
+    "navn": "Burritos",
+    "pris": 150,
+    "beskrivelse": "Hvedemelstortilla fyldt med kylling/oksefilet, mexicanske ris, bønner og en krydret sauce.",
+    "billede": "burrito"
+  },
+  {
+    "id": 16,
+    "kategori": "Hovedretter",
+    "navn": "Vegetar enchiladas",
+    "pris": 130,
+    "beskrivelse": "Gratinerede majstortillas fyldt med sauteerede artiskokker, skalotteløg tomater, jalapenos i flødesauce.",
+    "billede": "venchiladas"
+  },
+  {
+    "id": 17,
+    "kategori": "Hovedretter",
+    "navn": "Kyllinge-/oksefilet enchiladas",
+    "pris": 140,
+    "beskrivelse": "Majs tortillas fyldt med kylling elelrrevet oksefilet og cheddarost , gratineret i ovnen toppet med ost og creme fraiche.",
+    "billede": "enchiladas"
+  },
+  {
+    "id": 18,
+    "kategori": "Hovedretter",
+    "navn": "Mexicansk salat",
+    "pris": 150,
+    "beskrivelse": "Marineret kylling med sprød salat, oliven, tomater, bønner, agurk samt dressing.",
+    "billede": "salat"
+  },
+  {
+    "id": 19,
+    "kategori": "Hovedretter",
+    "navn": "Kylling/oksefajitas",
+    "pris": 170,
+    "beskrivelse": "Kylling- eller oksekød med mexicanske krydderier, rød/grønne peberfrugter, løg, cheddar ost, hvedemelstortilla og salsa.",
+    "billede": "fajitas"
+  },
+  {
+    "id": 20,
+    "kategori": "Desserter",
+    "navn": "Husets specialitet",
+    "pris": 70,
+    "beskrivelse": "Friteret og indbagt banan drysset med sukker og kanel, dryppet med akacie, serveres med vanilie is samt sæsonens frugter.",
+    "billede": "banan"
+  },
+  {
+    "id": 21,
+    "kategori": "Desserter",
+    "navn": "Mexicansk is",
+    "pris": 70,
+    "beskrivelse": "Cremet vanilie is med tequila og kahula, serveres med frugter.",
+    "billede": "is"
+  },
+  {
+    "id": 22,
+    "kategori": "Desserter",
+    "navn": "Bananasplit",
+    "pris": 70,
+    "beskrivelse": "Modne bananer, serveres med vanilieis, chokoladesauce, flødeskum og  sæsonenfrugter",
+    "billede": "bananasplit"
+  },
+  {
+    "id": 23,
+    "kategori": "Desserter",
+    "navn": "Buñuelos",
+    "pris": 70,
+    "beskrivelse": "Små, lune pandekager drysset med sukker og kanel, serveres med cremet vanilie is og sæsonens frugter",
+    "billede": "bunuelos"
+  },
+  {
+    "id": 24,
+    "kategori": "Drikkevarer",
+    "navn": "Sodavand",
+    "pris": 35,
+    "beskrivelse": "Coca-Cola, Coca-Cola zero, Fanta, Sprite, danskvand og vand.",
+    "billede": "drikkelse"
+  },
+  {
+    "id": 25,
+    "kategori": "Drikkevarer",
+    "navn": "Frozen Margarita",
+    "pris": 70,
+    "beskrivelse": "Lime/jordbær. Tequila (4 cl).",
+    "billede": "margarita"
+  },
+  {
+    "id": 26,
+    "kategori": "Drikkevarer",
+    "navn": "Mojito",
+    "pris": 80,
+    "beskrivelse": "Lime 4c cl. Havana rom, 1 cl. Angostura, håndfuld mynte.",
+    "billede": "mojito"
+  },
+  {
+    "id": 27,
+    "kategori": "Drikkevarer",
+    "navn": "Pina Colada",
+    "pris": 80,
+    "beskrivelse": "4 cl rom, frisk ananas, fløde samt kokosmælk.",
+    "billede": "pina"
+  },
+  {
+    "id": 28,
+    "kategori": "Drikkevarer",
+    "navn": "Øl",
+    "pris": 65,
+    "beskrivelse": "Saison, Lupulosa, Tinibla, Brown, Pompeolas.",
+    "billede": "ol"
+  },
+  {
+    "id": 29,
+    "kategori": "Drikkevarer",
+    "navn": "Kaffe",
+    "pris": 70,
+    "beskrivelse": "Mexicansk, Amaretto, Anatole, Diablo, Irish, Jamaican.",
+    "billede": "kaffe"
+  }
+]

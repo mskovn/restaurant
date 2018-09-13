@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Mex</title>
+
+    <style>
+            .data-container article img {
+            width: 100%;
+        }
+
+        .data-container {
+            margin: 0 auto;
+            display: grid;
+             grid-template-columns: repeat(3, 1fr);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+         <nav>
+           <button>Forside</button>
+            <button class="menu-item" data-kategori="Menu">Menu</button>
+            <button class="menu-item" data-kategori="forretter">forretter</button>
+            <button class="menu-item" data-kategori="hovedretter">hovedretter</button>
+            <button class="menu-item" data-kategori="desserter">desserter</button>
+            <button class="menu-item" data-kategori="drikkevarer">drikkevarer</button>
+            <button>Kontakt</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="data-container"></section>
+    </main>
+
+    <template class="data-template">
+        <article class="ret">
+            <img src="" alt=""><br>
+            <h2></h2>
+            <a class="data-navn" href=""></a><br>
+            <span class="data-pris"></span><br>
+            <span class="data-kategori"></span><br>
+        </article>
+    </template>
+
+    <script>
+    let dest = document.querySelector(".data-container"),
+        retter, kategorifilter = "Menu";
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let myJson = await fetch("json.json");
+            retter = await myJson.json();
+            visRetter();
+        }
+
+        document.querySelectorAll(".menu-item").forEach(knap => {
+            knap.addEventListener("click", filtrering)
+        });
+
+        function filtrering(){
+            dest.textContent = "";
+            kategorifilter=this.getAttribute("data-kategori");
+            visRetter();
+        }
+
+    function visRetter(){
+    let dest = document.querySelector(".data-container"),
+        temp = document.querySelector(".data-template");
+        document.querySelector("header h2").textContent = kategorifilter;
+        retter.forEach(ret => {
+            if (ret.kategori==kategorifilter || kategorifilter=="Menu"){
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h2").textContent = ret.navn;
+                klon.querySelector("img").src = "billeder/" + ret.billede + "-.jpg"
+                klon.querySelector("img").addEventListener("click", ()=> {
+                    window.location.href="indexSingle.html?id=" + ret.id;
+                })
+                klon.querySelector(".data-beskrivelse").textContent = ret.beskrivelse;
+                klon.querySelector(".data-pris").textContent = "Pris: " + ret.pris + ",-";
+                dest.appendChild(klon);
+            }
+        })
+    }
+    </script>
+
+</body>
+
+</html>
