@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Mex</title>
+
+    <style>
+        body {
+            background-color: rgb(240, 240, 240);
+        }
+
+        article {
+            padding: 5px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: coral;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 5px;
+            margin-bottom: 2%;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: chocolate;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .data-container {}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button onclick="tilbage()">Tilbage</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="data-container">
+            <article class="ret">
+                <img src="" alt=""><br>
+                <h2></h2>
+                <a class="data-navn" href=""></a><br>
+                <span class="data-pris"></span><br>
+                <span class="data-kategori"></span><br>
+                <span class="data-beskrivelse"></span>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        console.log("id");
+
+        let dest = document.querySelector(".data-container"),
+            retter, kategorifilter = "Menu";
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let myJson = await fetch("json.json");
+            retter = await myJson.json();
+            visRetter();
+        }
+
+        document.querySelectorAll(".menu-item").forEach(knap => {
+            knap.addEventListener("click", filtrering)
+        });
+
+        function filtrering() {
+            dest.textContent = "";
+            kategorifilter = this.getAttribute("data-kategori");
+            visRetter();
+        }
+
+        function visRetter() {
+
+            retter.forEach(ret => {
+                if (ret.id == id) {
+                    console.log(dest.querySelector("h2"));
+                    dest.querySelector("h2").textContent = ret.navn;
+                    dest.querySelector("img").src = "billeder/" + ret.billede + ".jpg";
+                    dest.querySelector(".data-beskrivelse").textContent = ret.beskrivelse;
+                    dest.querySelector(".data-pris").textContent = "Pris: " + ret.pris + ",-";
+                }
+            })
+                           }
+
+        function tilbage() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+
+</html>
