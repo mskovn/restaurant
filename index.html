@@ -30,6 +30,7 @@
             <button class="menu-item" data-kategori="drikkevarer">drikkevarer</button>
             <button>Kontakt</button>
         </nav>
+        <h2></h2>
     </header>
 
     <main class="container">
@@ -75,11 +76,10 @@
             if (ret.kategori==kategorifilter || kategorifilter=="Menu"){
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h2").textContent = ret.navn;
-                klon.querySelector("img").src = "billeder/" + ret.billede + "-.jpg"
+                klon.querySelector("img").src = "billeder/" + ret.billede + ".jpg"
                 klon.querySelector("img").addEventListener("click", ()=> {
                     window.location.href="indexSingle.html?id=" + ret.id;
                 })
-                klon.querySelector(".data-beskrivelse").textContent = ret.beskrivelse;
                 klon.querySelector(".data-pris").textContent = "Pris: " + ret.pris + ",-";
                 dest.appendChild(klon);
             }
