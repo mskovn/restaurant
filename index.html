@@ -67,7 +67,15 @@
 
         }
 
+        .sectionwrapper {
+            display: grid;
+            grid-template-columns: repeat (3, 1fr);
+        }
 
+        .h2grid {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
 
         /* BURGER */
 
@@ -161,7 +169,6 @@
             nav {
                 max-height: 200px;
                 background-color: #C9720A;
-                max-width: 87%;
             }
 
 
@@ -176,8 +183,9 @@
             }
 
             .logo {
-                float: right;
-                width: 7%;
+                width: 15%;
+                margin-top: 2em;
+                margin-left: 1em;
 
             }
 
@@ -203,9 +211,7 @@
 
 <body>
     <header>
-       <div class="logoet">
 
-        </div>
         <button class="burger">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -223,9 +229,15 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
-         <img src="logoet.png" alt="logo" class="logo">
+               <div class="logoet">
+ <img src="logoet.png" alt="logo" class="logo">
+        </div>
 
+       <div class="sectionwrapper">
+       <div class="h2grid">
         <h2></h2>
+        </div>
+        </div>
     </header>
 
     <main class="container">
