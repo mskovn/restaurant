@@ -17,6 +17,9 @@
             padding: 5px;
             background-color: white;
             border-radius: 5px;
+            font-family: tahoma, sans-serif;
+            font-size: 14px;
+            font-style: italic;
         }
 
         button {
@@ -32,7 +35,25 @@
             cursor: pointer;
         }
 
+        h2 {
+            font-family: impact, sans-serif;
+            font-size: 40px;
+            color: #C9720A
+        }
+
+        h3 {
+            font-family: tahoma, bold;
+            font-style: normal;
+
+        }
+
         p {
+            color: white;
+            font-family: tahoma, sans-serif;
+            font-size: 14px;
+        }
+
+                li {
             color: white;
             font-family: tahoma, sans-serif;
             font-size: 14px;
@@ -247,7 +268,7 @@
     <template class="data-template">
         <article class="ret">
             <img src="" alt=""><br>
-            <h2></h2>
+            <h3></h3>
             <a class="data-navn" href=""></a><br>
             <span class="data-pris"></span><br>
             <span class="data-kategori"></span><br>
@@ -284,7 +305,7 @@
             retter.forEach(ret => {
                 if (ret.kategori == kategorifilter || kategorifilter == "Menu") {
                     let klon = temp.cloneNode(true).content;
-                    klon.querySelector("h2").textContent = ret.navn;
+                    klon.querySelector("h3").textContent = ret.navn;
                     klon.querySelector("img").src = "billeder/" + ret.billede + ".jpg"
                     klon.querySelector("img").addEventListener("click", () => {
                         window.location.href = "indexSingle.html?id=" + ret.id;
