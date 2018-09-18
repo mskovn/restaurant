@@ -7,18 +7,21 @@
     <title>Mad Mex</title>
 
     <style>
-      body {
+        body {
             background-color: #ffff99;
             margin: 0;
         }
 
         article {
-            padding: 5px;
+            padding: 1.5em;
             margin-bottom: 5em;
             border-radius: 5px;
             font-family: tahoma, sans-serif;
             font-size: 14px;
             background-color: white;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
         }
 
         .data-pris {
@@ -26,7 +29,7 @@
         }
 
         button {
-            background-color:  #C9720A;
+            background-color: #C9720A;
             border: none;
             color: white;
             padding: 10px;
@@ -36,7 +39,7 @@
             margin-bottom: 2%;
             transition: .5s;
             cursor: pointer;
-            margin: 2em;
+            margin: 1em;
         }
 
         h2 {
@@ -59,18 +62,22 @@
             font-style: normal;
         }
 
-                li {
+        footer p {
+            font-size: .7em;
+        }
+
+        li {
             color: white;
             font-family: tahoma, sans-serif;
             font-size: 14px;
-                    font-style: normal;
+            font-style: normal;
         }
 
         img {
             width: 100%;
         }
 
-                footer {
+        footer {
             background-color: #C9720A;
             padding: .8em;
             margin-top: .5em;
@@ -78,14 +85,13 @@
             justify-content: space-around;
         }
 
-                @media screen and (min-width:580px) {
+        @media screen and (min-width:580px) {
             .data-container {
                 padding-left: 20%;
                 padding-right: 20%;
                 grid-gap: 5px;
                 grid-template-columns: repeat(1, 1fr);
             }
-
     </style>
 </head>
 
@@ -99,12 +105,13 @@
     <main class="container">
         <section class="data-container">
             <article class="ret">
+                <h2></h2>
                 <img src="" alt=""><br>
-                <h3></h3>
+
                 <a class="data-navn" href=""></a><br>
-                 <span class="data-beskrivelse"></span> <br>
+                <span class="data-beskrivelse"></span> <br>
                 <span class="data-kategori"></span><br>
-                 <span class="data-pris"></span><br>
+                <span class="data-pris"></span><br>
 
             </article>
         </section>
@@ -140,21 +147,21 @@
             retter.forEach(ret => {
                 if (ret.id == id) {
                     console.log(dest.querySelector("h2"));
-                    dest.querySelector("h3").textContent = ret.navn;
+                    dest.querySelector("h2").textContent = ret.navn;
                     dest.querySelector("img").src = "billeder/" + ret.billede + ".jpg";
-                     dest.querySelector(".data-pris").textContent = "Pris: " + ret.pris + ",-";
+                    dest.querySelector(".data-pris").textContent = "Pris: " + ret.pris + ",-";
                     dest.querySelector(".data-beskrivelse").textContent = ret.beskrivelse;
 
                 }
             })
-                           }
+        }
 
         function tilbage() {
             window.history.back();
         }
     </script>
 
-        <footer>
+    <footer>
         <p>Adresse:<br> Københavnergade 0, <br> 0000 København</p>
         <p>Telefonnummer: <br> + 45 00 00 00 00 </p>
         <p>Email:<br> madmex@mail.dk</p>
