@@ -35,6 +35,11 @@
             letter-spacing: 1px;
         }
 
+        footer p {
+            font-size: .7em;
+            padding-bottom: .6em;
+            padding-top: .5em;
+        }
 
         li {
             color: white;
@@ -55,17 +60,28 @@
 
         footer {
             background-color: #C9720A;
-            padding: .8em;
-            margin-top: .5em;
             display: flex;
             justify-content: space-around;
+            padding-left: .5em;
+            padding-right: .5em;
         }
 
 
+        button {
+            background-color:  #C9720A;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 5px;
+            margin-bottom: 2%;
+            transition: .5s;
+            cursor: pointer;
+        }
 
 
-
-        /* BURGER */
+         /* BURGER */
 
         .burger {
             /*         display: inline-block;*/
@@ -117,14 +133,15 @@
             transition: 0.6s;
             background-color: #C9720A;
             border-radius: .8em;
-            margin: 4em 2em 0em 2em;
+            margin: 1em;
+
 
         }
 
         nav.show {
             max-height: 500px;
             padding: 1em;
-            max-width: 30%;
+
         }
 
 
@@ -149,28 +166,30 @@
         }
 
 
-
         /* FORSIDE */
 
-        .sectionwrapper {
-            display: grid;
-            grid-template-columns: repeat (3, 1fr);
-
-
-        }
-
         .om {
-            grid-column-start: 2;
-            grid-column-end: 3;
-            padding-top: 4em;
-            padding-bottom: 7em;
+            margin: 1em;
+            margin-bottom: 4em;
         }
-
 
 
         /* MEDIA */
 
-        @media screen and (min-width:768px) {
+            @media screen and (min-width:400px) {
+            .sectionwrapper {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+            }
+
+                .om {
+                    grid-column-start: 2;
+                    grid-column-end: 6;
+                }
+
+
+
+        @media screen and (min-width:1100px) {
             .burger {
                 display: none;
             }
@@ -178,6 +197,7 @@
             nav {
                 max-height: 200px;
                 background-color: #C9720A;
+                text-align: center;
             }
 
 
@@ -191,19 +211,17 @@
 
             }
 
-            .logo {
-                width: 30%;
-                grid-column-start: 1;
-
-            }
-
             .om {
-                max-width: 40%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                 grid-column-start: 2;
+                    grid-column-end: 3;
             }
 
-            .logoet {
+                 .sectionwrapper {
                 display: grid;
-                grid-template-columns: repeat (3, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
     </style>
@@ -212,22 +230,22 @@
 
 <header>
 
-    <div class="splashbilledet">
-        <img src="splash.svg" alt="splash">
-    </div>
-    <button class="burger">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-    </button>
 
-    <nav>
-        <ul>
-            <li><a href="forside.html">Forside</a></li>
-            <li><a href="index.html">Menukort</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
+        <img src="splash.svg" alt="splash">
+
+                   <button class="burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="forside.html">Forside</a></li>
+                <li><a href="index.html">Menukort</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
 </header>
 
 <div class="sectionwrapper">
@@ -246,12 +264,31 @@
     </div>
 </div>
 
+<script>
+            // burger
+
+        function onLoad() {
+
+            // if (window.innerWidth <= 768) {
+
+            function toggleMenu() {
+                document.querySelector(".burger").classList.toggle("change");
+                document.querySelector("nav").classList.toggle("show");
+            }
+            document.querySelector(".burger").addEventListener("click", toggleMenu);
+            document.querySelector("ul").addEventListener("click", toggleMenu);
+
+        }
+        //}
+
+       document.addEventListener("DOMContentLoaded", function(event) {
+            onLoad();
+        });
+    </script>
+
 <footer>
     <p>Adresse:<br> Københavnergade 0, <br> 0000 København</p>
     <p>Telefonnummer: <br> +45 00 00 00 00 </p>
     <p>Email:<br> madmex@mail.dk</p>
-
 </footer>
 </html>
-
-
