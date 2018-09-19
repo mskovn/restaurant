@@ -1,0 +1,1 @@
+<a href=http://metteskovnielsen.dk/kea/05-dynamiskweb/02-design/02-restaurant/index.html>Link til hjemmeside</a>
