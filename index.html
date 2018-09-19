@@ -269,6 +269,8 @@
             <div class="bar3"></div>
         </button>
 
+
+       <!--Hovedmenu-->
         <nav>
             <ul>
                 <li><a href="forside.html">Forside</a></li>
@@ -282,24 +284,28 @@
         </div>
 
 
-
+        <!--Knapper til filtrering på kategorier-->
         <div class="sectionwrapper">
             <div class="h2grid">
                 <h2></h2>
 
             </div>
         </div>
-                <button class="menu-item" data-kategori="Menu">Alle</button>
+        <button class="menu-item" data-kategori="Menu">Alle</button>
         <button class="menu-item" data-kategori="Forretter">Forretter</button>
         <button class="menu-item" data-kategori="Hovedretter">Hovedretter</button>
         <button class="menu-item" data-kategori="Desserter">Desserter</button>
         <button class="menu-item" data-kategori="Drikkevarer">Drikkevarer</button>
     </header>
 
+
+   <!--Container til visning af retter-->
     <main class="container">
         <section class="data-container"></section>
     </main>
 
+
+   <!--Template til hvordan retterne skal vises-->
     <template class="data-template">
         <article class="ret">
             <img src="" alt=""><br>
@@ -317,6 +323,8 @@
             retter, kategorifilter = "Menu";
         document.addEventListener("DOMContentLoaded", hentJson);
 
+
+        // function, der henter Json filen
         async function hentJson() {
             let myJson = await fetch("json.json");
             retter = await myJson.json();
@@ -327,12 +335,14 @@
             knap.addEventListener("click", filtrering)
         });
 
+        // function, der filterer mellem retterne og deres kategorier
         function filtrering() {
             dest.textContent = "";
             kategorifilter = this.getAttribute("data-kategori");
             visRetter();
         }
 
+        // function, der får retterne vist
         function visRetter() {
             let dest = document.querySelector(".data-container"),
                 temp = document.querySelector(".data-template");
